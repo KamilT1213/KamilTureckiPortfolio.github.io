@@ -18,21 +18,6 @@ File: Layout CSS
 
 html{overflow-y:scroll;}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #e0e0e0;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #e0e0e0;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #e0e0e0;
-  }
-
 body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#666666; background-color:#161616;}
 
 .justify{text-align:justify;}
@@ -82,7 +67,7 @@ div.wrapper h3{padding-top: 5px; font-size:15px; color:#CCCCCC; background-color
 
 
 
-nav.Content {height:750px; width:100%;}
+nav.Content {height:700px; width:100%;}
 nav.Content {overflow:hidden; overflow-y:scroll;}
 
 #container{padding:30px 0;}
