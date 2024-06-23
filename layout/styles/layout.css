@@ -47,6 +47,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .col1{color:#FFFFFF; background-color:#161616; padding-bottom:30px;}
 .col2{color:#9B9B9B; background-color:#F9F9F9;}
 
+/* hello*/
 /* ----------------------------------------------Generalise------------------------------------- */
 
 #header, #topbar, #container, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
