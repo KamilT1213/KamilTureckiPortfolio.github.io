@@ -45,15 +45,15 @@ $(document).ready(function () {
       <h1><a href="index.html">Kamil Turecki</a></h1>
       <p>Game Developer</p>
     </div>
-    <!--div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div-->
+    <div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>
   </div>
 </div>
 <!-- ####################################################################################################### -->
 <div class="wrapper col1">
   <div id="topbar" class="clear">
     <ul id="topnav">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="pages/portfolio.html">Portfolio</a></li>
+      <li class="active"><a href="index.html">Portfolio</a></li>
+      <li><!--a href="pages/portfolio.html">Portfolio</a--></li>
     </ul>
     <!--
     <form action="#" method="post" id="search">
@@ -70,41 +70,143 @@ $(document).ready(function () {
 <div class="wrapper col2">
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
-    <h1>Current Project</h1>
-    <p>
-      Working on a gpu based volumetric renderer and simulator for uses in smoke, fog or water simulations  
-    </p>
-    <h2>Brief: </h2>
-    <!--img src="../images/PortfolioImages/image-8.png" alt="" /-->
-    <p>
-      The video bellow I've setup the volume to take mouse input and draw lines a set distance ahead of me as well as roughly erase draw voxels
-    </p>
-    <h3>Drawing and erasing demo</h3>
-    <video width="400" controls>
-      <source src="../images/PortfolioImages/2024-06-20 21-34-16.mp4" type="video/mp4">
-      Your browser does not support HTML video.
-    </video>
-    <!--
-    <h4>Headline 4 Colour and Size</h4>
-    <h5>Headline 5 Colour and Size</h5>
-    <h6>Headline 6 Colour and Size</h6>
-    <ul>
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Etiam vel sapien et est adipiscing commodo.</li>
-      <li>Duis pharetra eleifend sapien, id faucibus dolor rutrum et.</li>
-      <li>Donec et dui dolor, in lacinia leo.</li>
-      <li>Mauris posuere tellus ac purus adipiscing dapibus.</li>
-    </ul>
-    <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring intesquet nibh fames nulla curabitudin.</p>
-    <ol>
-      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-      <li>Etiam vel sapien et est adipiscing commodo.</li>
-      <li>Duis pharetra eleifend sapien, id faucibus dolor rutrum et.</li>
-      <li>Donec et dui dolor, in lacinia leo.</li>
-      <li>Mauris posuere tellus ac purus adipiscing dapibus.</li>
-    </ol>
-    -->
-    <!-- ####################################################################################################### --> 
+    <div id="portfolio">
+      <nav class="Content">
+        <ul >
+          <li>
+            <div class="portfoliocontainer clear">
+              <div class="fl_left">
+                <h2>Voxel Based Volume Renderer and Simulator</h2>
+                <p>In this project I was interested in different ways to display volumes made up from vexels that are
+                  stored on the gpu in the form of high resoulution textures.</p>
+                <p>My initial idea came from a recent concept I learnt about involing rendering hair and sometimes
+                  grass
+                  on 3D models. This inspired me to layer quads together and use their positions to sample a texture
+                  with
+                  transparancy in order to from the volume.</p>
+                <p>The volume texture itself was designed to be interated upon and perform different simulations in
+                  this
+                  space</p>
+                <p>Ultimetly I changed the rendering method to use marching rays to remove previous artifacts and
+                  allow
+                  more interested ray based calculations.</p>
+                <p>Later on inbetween the raytrace and displaying on screen steps was added a step involing
+                  multisampling
+                  the raytraced result and bluring the result to hide the voxels and create a cloud effect. The
+                  raytrace
+                  result resoulution could then be subsequently reduced.</p>
+              </div>
+              <div class="fl_right">
+                <ul>
+                  <li>
+                    <video width="300" controls>
+                      <source src="images/PortfolioImages/EarlyLooks.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                    <p class="name">Some early videos of the volume whilst <br> still using a shell texturing method
+                    </p>
+                  </li>
+                  <li>
+                    <video width="300" controls>
+                      <source src="images/PortfolioImages/Cellular.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                    <p class="name">Example of a cellular automata running <br> withing volume space</p>
+                  </li>
+                  <li><img src="images/PortfolioImages/Voxels.png" alt="" width="300" />
+                    <p class="name">Visible voxels now using marching rays for <br> higher quality and consistancy
+                      compared to <br>previous method</p>
+                  </li>
+                  <li class="last">
+                    <video width="300" controls>
+                      <source src="images/PortfolioImages/2024-06-20 21-34-16.mp4" type="video/mp4">
+                      Your browser does not support HTML video.
+                    </video>
+                    <p class="name">Current state using an extra step to render <br> onto screen with a lower
+                      resoulution
+                      and <br> then upscale and blur the final result</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <!-- ########### -->
+          <li>
+            <div class="portfoliocontainer clear">
+              <div class="fl_left">
+                <h2>Javascript Raytracer</h2>
+                <p>This is a project I was given during my first year of university, the primary objective was to
+                  write a
+                  render using javascript and the canvas container that uses raytracing and a simple lighting model,
+                  This
+                  means a directional light, specular reflection and shadows of spheres within a scene.</p>
+                <p>I had gone a few extra steps and added antialiasing which would first render the image, using a
+                  kernal
+                  scan it for object's edges, re-render the edges of the objects to create softer and more accurate
+                  outlines of shapes and details.</p>
+                <p>Further more I added the ability to draw triangles into the scene, this ment that I could then use
+                  the
+                  vertex information of these models to map a variety of textures onto the faces and ultimetly render
+                  fully textured models.</p>
+              </div>
+              <div class="fl_right">
+                <ul>
+                  <li><img src="images/PortfolioImages/Orbs2.png" alt="" width="300" />
+                    <p class="name">Spheres with triangle test</p>
+                  </li>
+                  <li><img src="images/PortfolioImages/image-8.png" alt="" width="300" />
+                    <p class="name">3D model with Texture Mapping</p>
+                  </li>
+                  <li class="last"><img src="images/PortfolioImages/banan1.png" alt="" width="300" />
+                    <p class="name">Fully textured banana model with spheres</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <!-- ########### -->
+          <li>
+            <div class="portfoliocontainer clear">
+              <div class="fl_left">
+                <h2>Card Cats Game Concept</h2>
+                <p>Game Concept involing real time strategy and deck building themed around cats</p>
+
+              </div>
+              <div class="fl_right">
+                <ul>
+                  <li class="last"><iframe width="400" height="250"
+                      src="https://www.youtube.com/embed/uv5749oiyyk?si=xHOl_-d8k6EELkBo" title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="name">Small Gameplay Demo</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- ########### -->
+    </div>
+    <!-- #######################################################################################################
+    <div class="pagination">
+      <ul>
+        <li class="prev"><a href="#">&laquo; Previous</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="#">6</a></li>
+        <li class="current">7</li>
+        <li><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="#">14</a></li>
+        <li><a href="#">15</a></li>
+        <li class="next"><a href="#">Next &raquo;</a></li>
+      </ul>
+    </div>
+     ####################################################################################################### --> 
   </div>
 </div>
 <!-- ####################################################################################################### -->

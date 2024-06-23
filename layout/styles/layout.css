@@ -63,6 +63,9 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 /* ----------------------------------------------Content------------------------------------- */
 
+nav.Content {height:600px; width:100%;}
+nav.Content {overflow:hidden; overflow-y:scroll;}
+
 #container{padding:30px 0;}
 #container a{color:#0BBDB3; background-color:#F9F9F9;}
 #content{display:block; float:left; width:630px;}
