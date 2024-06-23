@@ -17,6 +17,22 @@ File: Layout CSS
 @import url("portfolio.css");
 
 html{overflow-y:scroll;}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e0e0e0;
+  }
+
 body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#666666; background-color:#161616;}
 
 .justify{text-align:justify;}
@@ -45,7 +61,7 @@ img{margin:0; padding:0; border:none;}
 div.wrapper{display:block; width:100%; margin:0; text-align:left;}
 div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{margin:0 0 15px 0; padding:0; font-size:20px; font-weight:normal; line-height:normal;}
 .col1{color:#FFFFFF; background-color:#161616; padding-bottom:30px;}
-.col2{color:#9B9B9B; background-color:#F9F9F9;}
+.col2{color:#9B9B9B; background-color:#e0e0e0;}
 
 /* hello*/
 /* ----------------------------------------------Generalise------------------------------------- */
@@ -57,14 +73,16 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #header{padding:30px 0 0 0;}
 #header h1, #header p, #header ul{margin:0; padding:0; list-style:none; line-height:normal;}
 #header h1 a{font-size:46px; color:#CCCCCC; background-color:#161616;}
-
+div.wrapper h3{padding-top: 5px; font-size:15px; color:#CCCCCC; background-color:#e0e0e0;}
 /* ----------------------------------------------TopBar------------------------------------- */
 
 #topbar{height:40px; background:url("images/bar_gradient.png") top left repeat-x; z-index:1000;}
 
 /* ----------------------------------------------Content------------------------------------- */
 
-nav.Content {height:600px; width:100%;}
+
+
+nav.Content {height:750px; width:100%;}
 nav.Content {overflow:hidden; overflow-y:scroll;}
 
 #container{padding:30px 0;}
