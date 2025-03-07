@@ -7,6 +7,29 @@ Licence: Free to use under our free template licence terms
 Licence URI: http://www.os-templates.com/template-terms
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <style>
+    /* Modal background */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+  
+    /* Enlarged image */
+    .image-modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+    }
+  </style>
 <head>
 <title>Kamil Turecki</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -38,6 +61,30 @@ $(document).ready(function () {
 </script>
 <!-- / coinslider -->
 </head>
+<!-- Modal Container -->
+<div class="image-modal" id="imageModal">
+  <img id="modalImage" src="" alt="Enlarged Image">
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+      });
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    });
+  });
+</script>
 <body id="top">
 <div class="wrapper col1">
   <div id="header" class="clear">
@@ -71,8 +118,60 @@ $(document).ready(function () {
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
     <div id="portfolio">
-      <nav class="Content">
+      <!--<nav class="Content"> -->
         <ul >
+                    <!-- Volumetric Simulation and Rendering-->
+                    <li>
+                      <div class="portfoliocontainer clear">
+                        <div class="fl_left">
+                          <h2>Compute Based terrain edtior in deferred rendered scene</h2>
+                          <h3>C++ OpenGL <br></h3>
+          
+                          <p>In this project I was interested in different ways to display volumes made up from vexels that are
+                            stored on the gpu in the form of high resoulution textures.</p>
+                          <p>My initial idea came from a recent concept I learnt about involing rendering hair and sometimes
+                            grass
+                            on 3D models. This inspired me to layer quads together and use their positions to sample a texture
+                            with
+                            transparancy in order to from the volume.</p>
+                          <p>The volume texture itself was designed to be interated upon and perform different simulations in
+                            this
+                            space</p>
+                          <p>Ultimetly I changed the rendering method to use marching rays to remove previous artifacts and
+                            allow
+                            more interested ray based calculations.</p>
+                          <p>Later on inbetween the raytrace and displaying on screen steps was added a step involing
+                            multisampling
+                            the raytraced result and bluring the result to hide the voxels and create a cloud effect. The
+                            raytrace
+                            result resoulution could then be subsequently reduced.</p>
+                        </div>
+                        <div class="fl_right">
+                          <ul>
+                            <li>
+                              <iframe width="700" height="400" src="https://www.youtube.com/embed/gpdJj6twRFw?si=UIZngUaRK7J6gYET" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                              <p class="name">Some early videos of the volume whilst still using a shell texturing method <br> 
+                              </p>
+                            </li>
+                            <li>
+                              <li><img src="images/PortfolioImages/Engine1.png" alt="" width="320" />
+                              <p class="name">Current state using an extra step to render <br> onto screen with a lower
+                                resoulution
+                                and <br> then upscale and blur the final result. <br> A simple neighbour lookup simulation <br> is running on the voxels</p>
+                            </li>
+                            <li class="last">
+                              <video width="340" controls>
+                                <source src="images/PortfolioImages/FloatingSim.mp4" type="video/mp4">
+                                Your browser does not support HTML video.
+                              </video>
+                              <p class="name">Current state using an extra step to render <br> onto screen with a lower
+                                resoulution
+                                and <br> then upscale and blur the final result. <br> A simple neighbour lookup simulation <br> is running on the voxels</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
           <!-- Volumetric Simulation and Rendering-->
           <li>
             <div class="portfoliocontainer clear">
@@ -134,7 +233,7 @@ $(document).ready(function () {
             </div>
           </li>
           <!-- JS Raytracer -->
-          <li>
+          <!--<li>
             <div class="portfoliocontainer clear">
               <div class="fl_left">
                 <h2>Javascript Raytracer</h2>
@@ -167,9 +266,9 @@ $(document).ready(function () {
                 </ul>
               </div>
             </div>
-          </li>
+          </li>-->
           <!-- CardCats -->
-          <li>
+          <!--<li>
             <div class="portfoliocontainer clear">
               <div class="fl_left">
                 <h2>Card Cats Game Concept</h2>
@@ -190,8 +289,8 @@ $(document).ready(function () {
               </div>
             </div>
           </li>
-        </ul>
-      </nav>
+        </ul>-->
+      <!--</nav>-->
       <!-- ########### -->
     </div>
     <!-- #######################################################################################################
