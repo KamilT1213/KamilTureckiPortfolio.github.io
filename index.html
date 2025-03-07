@@ -1,90 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoFolio
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <style>
+    /* Modal background */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+  
+    /* Enlarged image */
+    .image-modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+    }
+  </style>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kamil Turecki - Portfolio</title>
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css">
-<style>
-  /* Ensure images and iframes scale properly */
-  img, iframe, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* Mobile-friendly layout */
-  .wrapper {
-    padding: 10px;
-  }
-
-  .portfoliocontainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .fl_left, .fl_right {
-    width: 100%;
-  }
-
-  .fl_right ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .fl_right ul li {
-    flex: 1 1 300px;
-    max-width: 100%;
-  }
-
-  /* Navigation */
-  #topnav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  #topnav li {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* Footer adjustments */
-  #footer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footbox {
-    margin-bottom: 20px;
-  }
-
-  /* Modal styling */
-  .image-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-
-  .image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px white;
-  }
-</style>
 <title>Kamil Turecki</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
