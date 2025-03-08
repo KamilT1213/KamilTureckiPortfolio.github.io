@@ -127,46 +127,49 @@ $(document).ready(function () {
                           <h2>Compute Based terrain edtior in deferred rendered scene</h2>
                           <h3>C++ OpenGL <br></h3>
           
-                          <p>In this project I was interested in different ways to display volumes made up from vexels that are
-                            stored on the gpu in the form of high resoulution textures.</p>
-                          <p>My initial idea came from a recent concept I learnt about involing rendering hair and sometimes
-                            grass
-                            on 3D models. This inspired me to layer quads together and use their positions to sample a texture
-                            with
-                            transparancy in order to from the volume.</p>
-                          <p>The volume texture itself was designed to be interated upon and perform different simulations in
-                            this
-                            space</p>
-                          <p>Ultimetly I changed the rendering method to use marching rays to remove previous artifacts and
-                            allow
-                            more interested ray based calculations.</p>
-                          <p>Later on inbetween the raytrace and displaying on screen steps was added a step involing
-                            multisampling
-                            the raytraced result and bluring the result to hide the voxels and create a cloud effect. The
-                            raytrace
-                            result resoulution could then be subsequently reduced.</p>
+                          <p>
+                            This project focused on using a verity of 3D rendering techniques with the final version being deferred rendered with pbr lighting and directional light shadows.
+                          </p>
+                          <p>
+                            A few of the unique features I decided to add was the editable terrain and overhang particles as well as a raycast implementation for player floor detection and editing.
+                          </p>
+                          <p>
+                            The terrain editing is handled by a compute shader that edits a displacement texture of which all the values (rgb -> xyz) are used to offset the terrain geometry.
+                          </p>
+                          <p>
+                            The overhang particles intercept the tesselated terrain geometry data in the geometry shader and write them to an SSBO, 
+                            these points are then used as the starting points for the particles which are contained in another SSBO and are controlled by a compute shader.
+                          </p>
+                          <p>
+                            The raycasting is made by reading back from the buffer on the gpu to the cpu a single rendered pixel in a given direction in the case of the floor its straight down,
+                            the information I wrote to the buffer was the position relative to the viewport and the ID of the object in the object list.
+                          </p>
                         </div>
                         <div class="fl_right">
                           <ul>
                             <li>
                               <iframe width="700" height="400" src="https://www.youtube.com/embed/gpdJj6twRFw?si=UIZngUaRK7J6gYET" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                              <p class="name">Some early videos of the volume whilst still using a shell texturing method <br> 
+                              <p class="name">This video is a quick demo of the terrain editor and a show of the lighting and shaders in real time.<br> 
                               </p>
                             </li>
                             <li>
-                              <li><img src="images/PortfolioImages/Engine1.png" alt="" width="320" />
-                              <p class="name">Current state using an extra step to render <br> onto screen with a lower
-                                resoulution
-                                and <br> then upscale and blur the final result. <br> A simple neighbour lookup simulation <br> is running on the voxels</p>
+                              <li><img src="images/PortfolioImages/Engine1.png" alt="" width="310" />
+                              <p class="name">
+                                Here you can see the terrain with the grass <br> 
+                                density increased and particles falling <br> 
+                                from the over hang.<br> 
+                                Notice the shadows and PBR lights.
+                              </p>
                             </li>
                             <li class="last">
-                              <video width="340" controls>
-                                <source src="images/PortfolioImages/FloatingSim.mp4" type="video/mp4">
-                                Your browser does not support HTML video.
-                              </video>
-                              <p class="name">Current state using an extra step to render <br> onto screen with a lower
-                                resoulution
-                                and <br> then upscale and blur the final result. <br> A simple neighbour lookup simulation <br> is running on the voxels</p>
+                              <li><img src="images/PortfolioImages/Engine1.png" alt="" width="310" />
+                              <p class="name">
+                                Lorem ipsum dolor sit amet, consectetur  <br> 
+                                adipiscing elit, sed do eiusmod tempor  <br> 
+                                incididunt ut labore et dolore magna aliqua. <br> 
+                                Ut enim ad minim veniam, quis nostrud<br> 
+                                exercitation ullamco laboris
+                              </p>
                             </li>
                           </ul>
                         </div>
