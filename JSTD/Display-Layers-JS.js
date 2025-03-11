@@ -26,24 +26,24 @@ export default class DisplayLayer{
     }
 
     get width(){
-        return Math.max(
-            //document.parentElement.width
+        return Math.min(
+            //document.width,
             document.body.scrollWidth,
-            //document.documentElement.scrollWidth,
-            //document.body.offsetWidth,
-            //document.documentElement.offsetWidth,
-            //document.documentElement.clientWidth
+            document.documentElement.scrollWidth,
+            document.body.offsetWidth,
+            document.documentElement.offsetWidth,
+            document.documentElement.clientWidth
         );
     }
 
     get height(){
-        return Math.max(
-            //document.parentElement.height
+        return Math.min(
+            //document.height,
             document.body.scrollHeight,
-            //document.documentElement.scrollHeight,
-            //document.body.offsetHeight,
-            //document.documentElement.offsetHeight,
-            //document.documentElement.clientHeight
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            document.documentElement.clientHeight
         );
     }
 
