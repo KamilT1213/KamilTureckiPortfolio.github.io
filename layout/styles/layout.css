@@ -158,10 +158,9 @@ nav.Content {overflow:hidden; overflow-y:scroll;}
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically (if needed) */ 
     width: 100%;             /* Ensures it takes full width */
-    padding: 0% 0;         /* Adds some breathing space */
+    padding: 5% 0;         /* Adds some breathing space */
     padding-top: 0% 0;
-    top: -10%;
-    transform: translate(-20%,-23%);
+    transform: translate(-12%,-23%);
 
 }
 
