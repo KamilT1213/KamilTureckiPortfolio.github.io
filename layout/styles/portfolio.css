@@ -19,3 +19,7 @@ File: Portfolio CSS
 #portfolio .fl_right li img{border:5px solid rgb(75, 75, 75);}
 #portfolio .fl_right p.name{font-weight:bold;}
 #portfolio .fl_right p.readmore{text-transform:uppercase;}
+#portfolio {
+    min-height: 1024px; /* Ensures enough space for dynamic content */
+    margin-bottom: 200px; /* Adds space before the footer */
+}

@@ -142,9 +142,45 @@ nav.Content {overflow:hidden; overflow-y:scroll;}
 #footer li{margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #333333;}
 #footer li strong.title{font-size:12px; font-weight:bold; text-transform:uppercase;}
 #footer .last{margin:0;}
+#footer {
+    clear: both; /* Ensures the footer is always below */
+    position: relative; /* Avoid overlapping */
+}
 
 /* ----------------------------------------------Copyright------------------------------------- */
 
 #copyright{padding:15px 0; border-top:1px solid #333333;}
 #copyright p{margin:0; padding:0;}
 #copyright, #copyright a{color:#666666; background-color:#161616;}
+
+#gameCanvasContainer {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically (if needed) */ 
+    width: 100%;             /* Ensures it takes full width */
+    padding: 27% 0;         /* Adds some breathing space */
+    padding-top: 0% 0;
+    top: -10%;
+    transform: translate(-20%,-23%);
+
+}
+
+#gameCanvasContainer {
+    text-align: left;
+    padding-left: 10%; /* Fine-tune as needed */
+}
+
+#gameCanvasContainer {
+    text-align: right;
+    padding-right: 10%; /* Fine-tune as needed */
+}
+
+#gameCanvasContainer {
+    width: 80vw; /* 80% of the viewport width */
+    height: 60vh; /* 60% of the viewport height */
+    max-width: 100%; /* Prevents overflow */
+    margin: 0 auto; /* Centers the canvas */
+    display: flex; /* Ensures proper layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
