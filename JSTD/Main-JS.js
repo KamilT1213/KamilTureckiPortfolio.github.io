@@ -630,7 +630,20 @@ addEventListener('mouseup', (event) => {
     MousePressed = false;
 });
 
+addEventListener('touchstart', (event) => {
+    MousePressed = true;
+});
+
+addEventListener('touchend', (event) => {
+    MousePressed = true;
+});
+
 Layers[0].canvas.addEventListener('mousemove', (event) => {
+    MousePosition.x = event.offsetX/GridSize;
+    MousePosition.y = event.offsetY/GridSize;
+});
+
+Layers[0].canvas.addEventListener('touchmove', (event) => {
     MousePosition.x = event.offsetX/GridSize;
     MousePosition.y = event.offsetY/GridSize;
 });
