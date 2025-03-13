@@ -43,7 +43,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <div class="wrapper col1">
     <div id="header" class="clear">
       <div class="fl_left">
-        <h1><a href="index.html">Kamil Turecki</a></h1>
+        <h1><a href="../index.html">Kamil Turecki</a></h1>
         <p>Game Developer</p>
       </div>
       <div class="fl_right"><a href="#"><!--img src="images/demo/468x60.gif" alt="" /--></a></div>
@@ -95,12 +95,13 @@ Licence URI: http://www.os-templates.com/template-terms
               <div class="fl_left">
                 <h2>Card Cats Game Concept</h2>
                 <h3>C# Unity <br></h3>
-                <p>Game Concept involing real time strategy and deck building themed around cats</p>
+                <p>Game Concept involving real-time strategy and deck building themed around cats</p>
+                <p>The cloud system is a series of animated instanced objects that react based on a units area of vision</p>
 
               </div>
               <div class="fl_right">
                 <ul>
-                  <li class="last"><iframe width="400" height="250"
+                  <li class="last"><iframe width="700" height="400"
                       src="https://www.youtube.com/embed/uv5749oiyyk?si=xHOl_-d8k6EELkBo" title="YouTube video player"
                       frameborder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -115,58 +116,49 @@ Licence URI: http://www.os-templates.com/template-terms
           <li>
             <div class="portfoliocontainer clear">
               <div class="fl_left">
-                <h2>Voxel Based Volume Renderer and Simulator</h2>
-                <h3>C++ OpenGL <br></h3>
+                <h2>Weapon Building system</h2>
+                <h3>C# Unity <br></h3>
 
-                <p>In this project I was interested in different ways to display volumes made up from vexels that are
-                  stored on the gpu in the form of high resoulution textures.</p>
-                <p>My initial idea came from a recent concept I learnt about involing rendering hair and sometimes
-                  grass
-                  on 3D models. This inspired me to layer quads together and use their positions to sample a texture
-                  with
-                  transparancy in order to from the volume.</p>
-                <p>The volume texture itself was designed to be interated upon and perform different simulations in
-                  this
-                  space</p>
-                <p>Ultimetly I changed the rendering method to use marching rays to remove previous artifacts and
-                  allow
-                  more interested ray based calculations.</p>
-                <p>Later on inbetween the raytrace and displaying on screen steps was added a step involing
-                  multisampling
-                  the raytraced result and bluring the result to hide the voxels and create a cloud effect. The
-                  raytrace
-                  result resoulution could then be subsequently reduced.</p>
+                <p>In this project I set myself a challenge to make a weapon building system I used Unity game engine as 
+                  the base line and first constructed the scene that holds the building system.
+                </p>
+                <p>The Initial idea involved using nodes that can be clicked on with parts from which the component would snap
+                  into place. However it evolved into a more dynamic system with a lot less constraints.
+                </p>
+                <p>When placing components in the free place system I used a function called "ComputePenetration" which given two colliders
+                  and thier position plus rotations will return the direction of overlap and the scalar of by how much they intersect.
+                </p>
+                <p>I still use the nodes as hidden trackers to make sure that when objects restricted to certain surface directions arn't placed in the 
+                  wrong configuration.
+                </p>
+                <p>As an imporovement to the system I would replace the nodes with just using the surface normals for a larger verity of face directions and
+                  more consistant behaviour.
+                </p>
               </div>
               <div class="fl_right">
                 <ul>
+                  <li class="last"><iframe width="700" height="400"
+                    src="https://www.youtube.com/embed/S0Fbh_8n06E?si=MYWtGp_F6qSEoinE"  title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p class="name">Gameplay showing off a verity of interworking systems from weapon building <br> 
+                    to picking up new parts and attacking with built weapons</p>
+                </li>
                   <li>
-                    <video width="300" controls>
-                      <source src="images/PortfolioImages/EarlyLooks.mp4" type="video/mp4">
-                      Your browser does not support HTML video.
-                    </video>
-                    <p class="name">Some early videos of the volume whilst <br> still using a shell texturing method
-                    </p>
+                    <iframe width="330" height="175" src="https://www.youtube.com/embed/O53or0aBCTY?si=54Z0IGARsXrCUiFf" title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="name">Early node based version of the builder <br> before the free form placement and <br> snapping system</p>
                   </li>
                   <li>
-                    <video width="300" controls>
-                      <source src="images/PortfolioImages/Cellular.mp4" type="video/mp4">
-                      Your browser does not support HTML video.
-                    </video>
-                    <p class="name">Example of a cellular automata running <br> withing volume space</p>
-                  </li>
-                  <li><img src="images/PortfolioImages/Voxels.png" alt="" width="300" />
-                    <p class="name">Visible voxels now using marching rays for <br> higher quality and consistancy
-                      compared to <br>previous method</p>
-                  </li>
-                  <li class="last">
-                    <video width="300" controls>
-                      <source src="images/PortfolioImages/FloatingSim.mp4" type="video/mp4">
-                      Your browser does not support HTML video.
-                    </video>
-                    <p class="name">Current state using an extra step to render <br> onto screen with a lower
-                      resoulution
-                      and <br> then upscale and blur the final result. <br> A simple neighbour lookup simulation <br> is
-                      running on the voxels</p>
+                    <iframe width="330" height="175" src="https://www.youtube.com/embed/QV5qkfVhQWg?si=u5NuOWoqgGBGPeq7"  title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="name">After a handful of iterations with this build <br> there is now free placement and an indicator 
+                    <br> to help find what direction of surface <br> you can place and the orientation of the weapon.</p>
                   </li>
                 </ul>
               </div>
