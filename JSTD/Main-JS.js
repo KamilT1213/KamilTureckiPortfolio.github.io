@@ -67,7 +67,7 @@ let MousePosition = new Vector2(0, 0);
 //Displayed Values
 let Currency = 30000;
 let Health = 300;
-let Strength = 0;
+let Strength = 10;
 
 //Tower Deploying and Selecting Varibles
 let SelectedUnit = 0;
