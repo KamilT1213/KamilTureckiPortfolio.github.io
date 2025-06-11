@@ -125,13 +125,29 @@ Licence URI: http://www.os-templates.com/template-terms
       </ul>
       -->
         <h2>Contact Me</h2>
-        <ul>
-          <li><strong class="title">Tel:</strong><br />
-            </li>
-          <li><strong class="title">Email:</strong><br />
-            <a href="#">kturecki1213@gmail.com</a>
+              <ul>
+        <li><strong class="title">Mobile:</strong><br />
+            <p id="copyText"> 07932 416377</p>
+
+            <script>
+              document.getElementById('copyText').addEventListener('click', function() {
+              const text = this.innerText;
+              navigator.clipboard.writeText(text)
+              })
+            </script>
           </li>
-        </ul>
+        <li><strong class="title">Email:</strong><br />
+          <p id="copyText">kturecki1213@gmail.com</p>
+
+          <script>
+            document.getElementById('copyText').addEventListener('click', function() {
+            const text = this.innerText;
+            // Use the Clipboard API
+            navigator.clipboard.writeText(text)
+            });
+          </script>
+        </li>
+      </ul>
       </div>
     </div>
   </div>

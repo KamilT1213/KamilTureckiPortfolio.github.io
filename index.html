@@ -124,7 +124,66 @@ $(document).ready(function () {
     <div id="portfolio">
       <!--<nav class="Content"> -->
         <ul >
-                    <!-- Volumetric Simulation and Rendering-->
+                    <!-- Excavation and Digging game -->
+                    <li>
+                      <div class="portfoliocontainer clear">
+                        <div class="fl_left">
+                          <h2>Island Digging and Relic Descovery game</h2>
+                          <h3>C++ OpenGL <br></h3>
+          
+                          <p>
+                            The final project of my games programming degree. The objective was to take game mechanic idea and create a fully playable game around it. 
+                            Including its menus and other necessary systems like saving and loading that is expected in a modern video game.
+                          </p>
+                          <p>
+                            The primary feature of the game is the compute based digging system, this lets you dig through the terrain of the island to uncover relics of power.
+                          </p>
+                          <p>
+                            As you play through the game you will encounter various parts of scenery in your way as you dig deeper for all the relics you can find. 
+                            These are placed here using a compute shader that determines what is the best placement of relics and scenery.
+                          </p>
+                          <p>
+                            Before anything happens in the game however, what first occurs the island generator, 
+                            this expensive process is purposely hidden in the loading stage of the game and consists of a creative application of various noise and disotortion functions onto a texture based buffer.
+                          </p>
+                          <p>
+                            Last but not least the augmentation system is the heart of the game, this changes the behaviour of both digging and extraction giving space for experimentation and discovery. 
+                            The mechanic works on the C++ system of function binding where upon equiping a new item the system rebind a new function into slot to be executed during gameplay.
+                          </p>
+                        </div>
+                        <div class="fl_right">
+                          <ul>
+                            <li>
+                              <iframe width="700" height="400" src="https://www.youtube.com/embed/LhAKe6ukrCs?si=wqOX6nnfqDNsSR3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                              <p class="name">Short gameplay video of the final project as would be played by a new player.<br> 
+                              </p>
+                            </li>
+                            <li>
+                              <li><img src="images/PortfolioImages/Inventory.png" alt="" width="310" />
+                              <p class="name">
+                                Screenshot of the inventory with the first 4<br> 
+                                rows unlocked. Here you can see their progress <br> 
+                                towards leveling up and the currently selected<br> 
+                                (Dotted circle) relic to be equiped.
+                              </p>
+                            </li>
+                            <li class="last">
+                              <li><img src="images/PortfolioImages/IslandandRelic.png" alt="" width="310" />
+                              <p class="name">
+                                Here is an illustration of the mechanics behind <br> 
+                                finding viable spawn locations for scenery and <br> 
+                                relics. The abstract of how this works is that<br> 
+                                the image of the terrain is divided into a grid<br> 
+                                and then the compute shader determines if<br>
+                                there is a spot that is far enough from the <br>
+                                terrains edge to place an item.
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- Terrain editor and advanced rendering -->
                     <li>
                       <div class="portfoliocontainer clear">
                         <div class="fl_left">
@@ -331,12 +390,12 @@ $(document).ready(function () {
     <div class="footbox">
       <h2>Key Skills</h2>
       <ul>
-        <li><a href="#">C++</a></li>
-        <li><a href="#">GLSL</a></li>
-        <li><a href="#">C#</a></li>
-        <li><a href="#">Unity</a></li>
-        <li><a href="#">Unreal</a></li>
-        <li><a href="#">Blender</a></li>
+        <li><a>C++</a></li>
+        <li><a>GLSL</a></li>
+        <li><a>C#</a></li>
+        <li><a>Unity</a></li>
+        <li><a>Unreal</a></li>
+        <li><a>Blender</a></li>
         <!--
         <li><a href="#">In nec justo non</a></li>
         <li><a href="#">Vivamus mollis enim ut</a></li>
@@ -374,10 +433,27 @@ $(document).ready(function () {
       -->
       <h2>Contact Me</h2>
       <ul>
-        <li><strong class="title">Tel:</strong><br />
+        <li><strong class="title">Mobile:</strong><br />
+            <p id="copyText"> 07932 416377</p>
+
+            <script>
+              document.getElementById('copyText').addEventListener('click', function() {
+              const text = this.innerText;
+              navigator.clipboard.writeText(text)
+              })
+            </script>
           </li>
         <li><strong class="title">Email:</strong><br />
-          <a href="#">kturecki1213@gmail.com</a></li>
+          <p id="copyText">kturecki1213@gmail.com</p>
+
+          <script>
+            document.getElementById('copyText').addEventListener('click', function() {
+            const text = this.innerText;
+            // Use the Clipboard API
+            navigator.clipboard.writeText(text)
+            });
+          </script>
+        </li>
       </ul>
     </div>
   </div>
